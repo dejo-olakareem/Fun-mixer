@@ -11,9 +11,11 @@ body {
 }
 
 .list {
+
   width: 80%;
   text-align:center;
   margin: 0 auto;
+  margin-top: 50px;
 }
 .block{
   opacity: 0.7;
@@ -43,6 +45,17 @@ body {
 @media screen and (max-width: 950px) {
     .block {
         width: 90%;
-        height: 150px;
+    }
+}
+
+
+@media only screen and (max-device-width: 480px) {
+    .block {
+      width: 90%;
+      height: 250px;
+    }
+
+    body {
+      font-size: 2em;
     }
 }

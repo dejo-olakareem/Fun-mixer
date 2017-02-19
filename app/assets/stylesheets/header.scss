@@ -7,6 +7,9 @@
   box-shadow:none;
   border:none;
   margin-bottom:0;
+  // position: fixed;
+  width: 100%;
+  margin-top: 0;
 }
 
 @media (max-width:767px) {
@@ -216,4 +219,3 @@
 .navigation-clean-button.navbar-inverse .action-button:hover {
   background:#269d9d;
 }
-
