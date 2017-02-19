@@ -1,5 +1,11 @@
-<% @event.each do |event| %>
-	<h1> <a href="/events/<%=event.id%>"><%=event.location%></a> </h1>
-	<p><%=event.start_date%></p>
-	<p><%=event.end_date%></p>
-<% end %>
+<div class="list">
+	<% @event.each do |event| %>
+	<div class="block panel panel-default">
+		<span class="big-title"><a href="/events/<%=event.id%>"><%=event.location%></a> </span>
+		<div class="panel-body">
+			<p><%=event.start_date%></p>
+			<p><%=event.end_date%></p>
+		</div>
+	</div>
+	<% end %>
+</div>

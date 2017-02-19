@@ -8,6 +8,6 @@
 
 
 require 'faker'
-7.times do
+100.times do
 	Event.create(location:Faker::TwinPeaks.location,start_date:Faker::Date.between(2.days.ago, Date.today),end_date:Faker::Date.forward(23),start_time:Faker::Time.between(2.days.ago, Date.today, :all),end_time:Faker::Time.between(2.days.ago, Date.today, :day))
 end

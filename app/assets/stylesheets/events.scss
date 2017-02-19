@@ -1,3 +1,35 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+    background: url('http://i.imgur.com/RRUe0Mo.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    // background-size: cover;
+	  // color:#fff;
+  	// background-color:#333;
+  	font-family: 'Open Sans',Arial,Helvetica,Sans-Serif;
+}
+
+.list {
+  width: 1200px;
+  text-align:center;
+  margin: 0 auto;
+}
+.block{
+  background-color: rgb(251, 253, 255);
+  display: inline-block;
+  width: 350px;
+  height: 200px;
+  margin-left: 25px;
+  margin-top: 25px;
+  border-radius: 2px;
+}
+
+
+
+.big-title {
+  text-align: center;
+}
