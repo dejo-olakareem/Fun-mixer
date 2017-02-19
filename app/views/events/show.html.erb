@@ -1,0 +1,14 @@
+<h1><%= @event.location%> </h1>
+<p><%=@event.start_date%></p>
+<p><%=@event.start_time%></p>
+<p><%=@event.end_date%></p>
+<p><%=@event.end_time%></p>
+
+
+<h3>Click here to register</h3>
+<form method="post" action="/attendances">
+	<input type="hidden" name="attendance[user_id]" value="<%=@user.id%>">
+	<input type="hidden" name="attendance[_id]" value="<%=@concert.id%>">
+	<input type="submit" value="Attend">
+
+</form>
