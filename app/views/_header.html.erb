@@ -1,53 +1,36 @@
-<% if @user %>
-	<%= link_to "Log out" ,destroy_user_session_path %>
-	<%= link_to "Home" ,root_path %>
-	<a href="/users/<%@user.id%>"><%=@user.email%></a>
-<% else %>
-	<%= link_to "Sign In" ,new_user_session_path %>
-	<%= link_to "Register" ,new_user_registration_path %>
-<% end %>
+<%# if @user %>
+	<%#= link_to "Log out" ,destroy_user_session_path %>
+	<%#= link_to "Home" ,root_path %>
+	<!-- <a href="/users/<%#@user.id%>"><%#=@user.email%></a> -->
+<%# else %>
+	<%#= link_to "Sign In" ,new_user_session_path %>
+	<%#= link_to "Register" ,new_user_registration_path %>
+<%# end %>
 
 
-<html>
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal site</title>
-    <link rel="stylesheet" href="bootstrap.min.css" />
-    <link rel="stylesheet" href="Navigation-with-Button1.css" />
-    <link rel="stylesheet" href="Navigation-with-Search1.css" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="tabbed_slider.css" />
-    <link rel="stylesheet" href="tabbed_slider1.css" />
-    <link rel="stylesheet" href="Timeline.css" />
-    <link rel="stylesheet" href="Zig-Zag-Timeline-v31.css" />
-</head>
-
-<body>
-    <div>
-        <nav class="navbar navbar-default navigation-clean-button">
-            <div class="container">
-                <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">Company Name</a>
-                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                </div>
-                <div class="collapse navbar-collapse" id="navcol-1">
-                    <ul class="nav navbar-nav">
-                        <li class="active" role="presentation"><a href="#">First Item</a></li>
-                        <li role="presentation"><a href="#">Second Item</a></li>
-                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li role="presentation"><a href="#">First Item</a></li>
-                                <li role="presentation"><a href="#">Second Item</a></li>
-                                <li role="presentation"><a href="#">Third Item</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <p class="navbar-text navbar-right actions"><a class="navbar-link login" href="#">Log In</a> <a class="btn btn-default action-button" role="button" href="#">Sign Up</a></p>
-                </div>
+<div>
+    <nav class="navbar navbar-default navigation-clean-button">
+        <div class="container">
+            <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">Fun Mixer</a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
             </div>
-        </nav>
-    </div>
-</body>
-
-</html>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav">
+                    <% if @user %>
+                    <li class="active" role="presentation"><%= link_to "Log out" ,destroy_user_session_path %></li>
+                    <li role="presentation"><%= link_to "Home" ,root_path %></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="presentation"><a href="#">First Item</a></li>
+                            <li role="presentation"><a href="#">Second Item</a></li>
+                            <li role="presentation"><a href="#">Third Item</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <% else %>
+                <p class="navbar-text navbar-right actions"><a class="navbar-link login" href="#">Log In</a> <a class="btn btn-default action-button" role="button" href="#">Sign Up</a></p>
+                <% end %>
+            </div>
+        </div>
+    </nav>
+</div>
