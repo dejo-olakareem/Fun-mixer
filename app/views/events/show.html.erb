@@ -4,11 +4,12 @@
 <p><%=@event.end_date%></p>
 <p><%=@event.end_time%></p>
 
+<% if @user %>
+	<h3>Click here to register</h3>
+	<form method="post" action="/attendances">
+		<input type="hidden" name="attendance[user_id]" value="<%=@user.id%>">
+		<input type="hidden" name="attendance[event_id]" value="<%=@event.id%>">
+		<input type="submit" value="Attend">
 
-<h3>Click here to register</h3>
-<form method="post" action="/attendances">
-	<input type="hidden" name="attendance[user_id]" value="<%=@user.id%>">
-	<input type="hidden" name="attendance[_id]" value="<%=@concert.id%>">
-	<input type="submit" value="Attend">
-
-</form>
+	</form>
+<% end %>
