@@ -3,25 +3,23 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-    background: url('http://i.imgur.com/RRUe0Mo.png') no-repeat center center fixed;
+    background: url('background.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    // background-size: cover;
-	  // color:#fff;
-  	// background-color:#333;
   	font-family: 'Open Sans',Arial,Helvetica,Sans-Serif;
 }
 
 .list {
-  width: 1200px;
+  width: 80%;
   text-align:center;
   margin: 0 auto;
 }
 .block{
+  opacity: 0.7;
   background-color: rgb(251, 253, 255);
   display: inline-block;
-  width: 350px;
+  width: 30%;
   height: 200px;
   margin-left: 25px;
   margin-top: 25px;
@@ -32,4 +30,19 @@ body {
 
 .big-title {
   text-align: center;
+}
+
+
+@media only screen and (max-width: 1300px) {
+
+    .block {
+      width: 45%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .block {
+        width: 90%;
+        height: 150px;
+    }
 }
