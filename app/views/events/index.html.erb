@@ -2,10 +2,8 @@
 	<% @event.each do |event| %>
 	<div class="block panel panel-default">
 	<a class="big-title" href="/events/<%=event.id%>"><%=event.location%></a>
-
 		<div class="panel-footer box-bottom">
 			<span class="date"><%=event.start_date.strftime("%b %d")%></span>
-
 		</div>
 	</div>
 	<% end %>

@@ -19,7 +19,7 @@ body {
 
 .block{
   position: relative;
-  opacity: 1.0;
+  opacity: 0.9;
   background-color: rgb(251, 253, 255);
   display: inline-block;
   width: 30%;
@@ -47,7 +47,6 @@ body {
 }
 
 .box-bottom{
-  opacity: 0.8;
   font-weight: bold;
   position:absolute;bottom:0;
   width: 100%;
