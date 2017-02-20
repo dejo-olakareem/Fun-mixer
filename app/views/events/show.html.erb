@@ -6,7 +6,7 @@
 
     <div class="cont" style="margin:100px; background-color: Azure;">
         <div>
-            <div class="lefty"></div>
+            <div class="lefty" style="background:url(<%=@background%>); background-size:cover;" ;></div>
             <div class="righty">
             	<h1 class="vilde"><%= @event.location%> </h1>
 									<p class="vilde" style="padding-bottom: 15px;"><%=@event.start_date.strftime("%a %d ")%> to <%=@event.end_date.strftime("%a %d ")%></p>
