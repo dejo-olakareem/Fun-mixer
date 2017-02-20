@@ -1,15 +1,42 @@
-<h1><%= @event.location%> </h1>
-<p><%=@event.start_date%></p>
-<p><%=@event.start_time%></p>
-<p><%=@event.end_date%></p>
-<p><%=@event.end_time%></p>
 
-<% if @user %>
-	<h3>Click here to register</h3>
-	<form method="post" action="/attendances">
-		<input type="hidden" name="attendance[user_id]" value="<%=@user.id%>">
-		<input type="hidden" name="attendance[event_id]" value="<%=@event.id%>">
-		<input type="submit" value="Attend">
 
-	</form>
-<% end %>
+
+
+
+
+    <div class="cont" >
+        <div>
+            <div class="lefty" style="background:url(<%=@background%>); background-size:cover;"></div>
+            <div class="righty">
+            	<h1 class="vilde"><%= @event.location%> </h1>
+									<p class="vilde" style="padding-bottom: 15px;"><%=@event.start_date.strftime("%b %a %d ")%> to <%=@event.end_date.strftime("%b %a %d ")%></p>
+									<section class="vilde">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</section>
+									<div class="regi vilde">
+										<% if current_user %>
+											<h3>Click here to register</h3>
+											<form method="post" action="/attendances">
+												<input type="hidden" name="attendance[user_id]" value="<%=current_user.id%>">
+												<input type="hidden" name="attendance[event_id]" value="<%=@event.id%>">
+												<input class="btn btn-info btn-block" type="submit" value="Attend">
+											</form>
+										<% else %>
+											  <%= button_to "GET TIX",new_user_session_path, class:"btn btn-info btn-block" %> 
+									<% end %>
+									</div>
+            </div>
+            <div class="description">
+            	<h1> Peace and Raving</h1>
+            	<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            	proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            </div>
+        </div>
+    </div>
