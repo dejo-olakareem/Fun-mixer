@@ -6,8 +6,7 @@ class CreateEvents < ActiveRecord::Migration[5.0]
     	t.date :end_date
     	t.time :end_time
     	t.string :location
-
-
+      t.float :price
       t.timestamps
     end
   end

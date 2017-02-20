@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20170215034222) do
     t.date     "end_date"
     t.time     "end_time"
     t.string   "location"
+    t.float    "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
