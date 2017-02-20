@@ -2,8 +2,13 @@
 	<% @event.each do |event| %>
 	<div class="block panel panel-default">
 	<a class="big-title" href="/events/<%=event.id%>"><%=event.location%></a>
+	<span class="price">$<%="#{event.price}0"%></span>
 		<div class="panel-footer box-bottom">
-			<span class="date"><%=event.start_date.strftime("%b %d")%></span>
+			<div class="bottom">
+				<span class="share footer-item">|_|</span>
+				<span class="save footer-item">XXX</span>
+				<span class="date footer-item"><%=event.start_date.strftime("%d%b")%></span>
+			</div>
 		</div>
 	</div>
 	<% end %>

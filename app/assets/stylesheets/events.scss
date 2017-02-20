@@ -42,7 +42,7 @@ body {
   white-space:nowrap;
   overflow: hidden;
   width: 80%;
-  font-size: 1.75vw;
+  font-size: 1.50vw;
 
 }
 
@@ -53,8 +53,21 @@ body {
   height: 20%;
 }
 
-.date {
-  position:absolute;right:10%;
+
+.bottom{
+  position: absolute;bottom: 20%;right:7.5%;
+  display: inline-block;
+  word-spacing: 30px;
+}
+
+
+
+.price {
+  position:absolute;top:0;right:0;
+  border-radius: 1px;
+  padding: 1%;
+  opacity: 0.7;
+  background-color: white;
 }
 
 .big-title:hover{
@@ -83,7 +96,7 @@ body {
       width: 45%;
     }
     .big-title{
-      font-size: 2.5vw;
+      font-size: 2vw;
     }
 }
 
