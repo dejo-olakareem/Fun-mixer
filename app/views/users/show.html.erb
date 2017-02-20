@@ -1,1 +1,7 @@
 <h1> <%= current_user.email %> </h1>
+
+<p>You are attending all this party</p>
+
+<% @user.events.each do |event| %>
+	<h1><%=event.location %></h1>
+<% end %>
