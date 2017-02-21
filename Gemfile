@@ -40,6 +40,9 @@ gem 'jbuilder', '~> 2.5'
 #Device
 gem 'devise'
 
+#OmniAuth
+gem "omniauth-google-oauth2"
+
 #faker
 gem 'faker'
 
