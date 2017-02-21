@@ -43,7 +43,7 @@ Rails.application.configure do
   # config.force_ssl = true
 
   # heroku
-  config.serve_static_files = true
+  config.public_file_server.enabled = true
   config.assets.digest = true
 
 
