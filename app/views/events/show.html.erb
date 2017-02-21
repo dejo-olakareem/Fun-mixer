@@ -22,13 +22,13 @@
 											<form method="post" action="/attendances">
 												<input type="hidden" name="attendance[user_id]" value="<%=current_user.id%>">
 												<input type="hidden" name="attendance[event_id]" value="<%=@event.id%>">
-												<input class="btn btn-info btn-block" type="submit" value="Attend">
+												<input class="btn btn-info btn-block stylo" type="submit" value="Attend">
 											</form>
 										<% else %>
 											<% if @event.users.include?(current_user) %>
-												<input class="btn btn-info btn-block" value="You are attending" >
+												<input class="btn btn-info btn-block stylo" value="You are attending" >
 											<% else%>
-											  <%= button_to "GET TIX",new_user_session_path, class:"btn btn-info btn-block" %> 
+											  <%= button_to "GET TIX",new_user_session_path, class:"btn btn-info btn-block stylo" %> 
 											<% end %>
 										<% end %>
 									</div>
