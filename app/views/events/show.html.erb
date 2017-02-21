@@ -9,6 +9,7 @@
             <div class="lefty" style="background:url(<%=@background%>); background-size:cover;"></div>
             <div class="righty">
             	<h1 class="vilde"><%= @event.location%> </h1>
+            	<h3 class="vilde">$ <%= @event.price%> </h1>
 									<p class="vilde" style="padding-bottom: 15px;"><%=@event.start_date.strftime("%b %a %d ")%> to <%=@event.end_date.strftime("%b %a %d ")%></p>
 									<section class="vilde">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
