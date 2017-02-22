@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+#dotenv https://github.com/bkeepers/dotenv
+gem 'dotenv-rails', groups: [:development, :test]
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -37,6 +39,9 @@ gem 'jbuilder', '~> 2.5'
 
 #Device
 gem 'devise'
+
+#OmniAuth
+gem "omniauth-google-oauth2"
 
 #faker
 gem 'faker'

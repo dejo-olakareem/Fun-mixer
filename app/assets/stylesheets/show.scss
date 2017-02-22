@@ -22,33 +22,27 @@ div.righty {
 
 }
 
+.vilde {
+	padding: 10px;
+}
+
+
 div.description {
-	padding-top:10px;
+  padding-top:10px;
   clear:both;
   width:100%;
   height:350px;
   text-align:center;
 }
 
+
 .regi{
-		position:absolute;
-    bottom:10px;
+    padding-top: 40px;
+    width:250px;
+    margin:0 auto;
 }
 
 
-.vilde {
-	padding: 10px;
-}
-
-
-@media only screen and (max-width: 1050px) {
-
-    .regi{
-      position:relative;
-      bottom:10px;
-    }
-    
-}
 
 @media only screen and (max-width: 1050px) {
     
@@ -66,13 +60,13 @@ div.description {
 
     .regi{
       position:relative;
+      width:250px;
       bottom:10px;
     }
 
     div.description{
       height:100%;
     }
-    
 }
 
 @media only screen and (max-width: 500px) {
@@ -100,7 +94,6 @@ div.description {
     .vilde{
       font-size:0.8em;
     }
-
     
     
 }

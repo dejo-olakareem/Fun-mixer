@@ -9,6 +9,7 @@
             <div class="lefty" style="background:url(<%=@background%>); background-size:cover;"></div>
             <div class="righty">
             	<h1 class="vilde"><%= @event.location%> </h1>
+            	<h3 class="vilde">$ <%= @event.price%> </h1>
 									<p class="vilde" style="padding-bottom: 15px;"><%=@event.start_date.strftime("%b %a %d ")%> to <%=@event.end_date.strftime("%b %a %d ")%></p>
 									<section class="vilde">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -17,16 +18,20 @@
 									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</section>
 									<div class="regi vilde">
-										<% if current_user %>
+										<% if current_user && !@event.users.include?(current_user)%>
 											<h3>Click here to register</h3>
 											<form method="post" action="/attendances">
 												<input type="hidden" name="attendance[user_id]" value="<%=current_user.id%>">
 												<input type="hidden" name="attendance[event_id]" value="<%=@event.id%>">
-												<input class="btn btn-info btn-block" type="submit" value="Attend">
+												<input class="btn btn-info btn-block stylo" type="submit" value="Attend">
 											</form>
 										<% else %>
-											  <%= button_to "GET TIX",new_user_session_path, class:"btn btn-info btn-block" %> 
-									<% end %>
+											<% if @event.users.include?(current_user) %>
+												<input class="btn btn-info btn-block stylo" value="You are attending" >
+											<% else%>
+											  <%= button_to "GET TIX",new_user_session_path, class:"btn btn-info btn-block stylo" %> 
+											<% end %>
+										<% end %>
 									</div>
             </div>
             <div class="description">
