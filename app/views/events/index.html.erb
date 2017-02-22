@@ -1,3 +1,17 @@
+<body class="homepage">
+<div class="simple-slider">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(https://s-media-cache-ak0.pinimg.com/originals/b7/d9/d8/b7d9d84947471d0494ef1818b7fd0b97.jpg);"><!-- <h1 id="bold">SPOTTED </h1>
+                <p id="par">Make Extra money going for a drive</p> --></div>
+                <div class="swiper-slide" style="background-image:url(https://img3.goodfon.su/wallpaper/big/7/65/girl-beach-summer-party-3590.jpg);"><!-- <h1 id="bold">FIND YOUR SPOT </h1>
+                    <p id="par">It is right around the corner</p> --></div>
+                    <div class="swiper-slide" style="background-image:url(https://i.ytimg.com/vi/7fN13E_JuWw/maxresdefault.jpg);"><!-- <h1 id="bold">SMILE </h1>
+                        <p id="par">Have fun with peace of mind</p> --></div>
+                    </div>
+    </div>
+</div>
+
 <div class="list">
 	<% @event.each do |event| %>
 	<div class="block panel panel-default">
@@ -5,11 +19,10 @@
 	<span class="price">$<%="#{event.price}0"%></span>
 		<div class="panel-footer box-bottom">
 			<div class="bottom">
-				<span class="share footer-item">|_|</span>
-				<span class="save footer-item">XXX</span>
-				<span class="date footer-item"><%=event.start_date.strftime("%d%b")%></span>
+				<span class="date footer-item"><%=event.start_date.strftime("%d.%b")%></span>
 			</div>
 		</div>
 	</div>
 	<% end %>
 </div>
+</body>
