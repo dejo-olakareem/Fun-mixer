@@ -10,7 +10,11 @@
         </div>
         <div class="form-group">
             <%= f.submit "Log in", class:"btn btn-info btn-block", style: "background:transparent; color:#337ab7"%>
-        </div><a href="#" class="forgot"><%= render "devise/shared/links" %></a>
+        </div>
+        <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path,class:"btn btn-info btn-block", style: "background:transparent; color:#337ab7" %>
+        <%= link_to "Sign up", new_user_registration_path(@parent) %><br>
+        <%= link_to "Forgot your password?",  new_user_password_path(@parent) %>
+        <!-- <a href="#" class="forgot"><%#= render "devise/shared/links" %></a> -->
         <% end %>
 </div>
 </body>

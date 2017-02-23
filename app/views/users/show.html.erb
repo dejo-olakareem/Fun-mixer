@@ -1,7 +1,12 @@
-<h1> <%= current_user.email %> </h1>
+<body class="sweet">
+	<div style="color: Azure;">
+		<h1><%= current_user.email %> </h1>
 
-<p>You are attending all this party</p>
+		<p>You are attending all this party</p>
 
-<% @user.events.each do |event| %>
-	<h1><%=event.location %></h1>
-<% end %>
+		<% @user.events.each do |event| %>
+			<p><%=event.location %>, <%=event.price %> ,</p>
+
+		<% end %>
+	</div>
+</body>
