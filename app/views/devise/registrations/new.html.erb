@@ -23,8 +23,7 @@
         </div>
         <div class="form-group">
             <%= f.submit "Sign up", class:"btn btn-info btn-block",style: "background:transparent; color:#337ab7"%>
-        </div>< link_to "You already have an account? Login here." 
-        <a href="/users/sign_in" class="already">You already have an account? Login here.</a>
+        </div><%= link_to "You already have an account? Login here." ,new_user_session_path,class: 'already' %>
         <% end %>
 </div>
 </body>
