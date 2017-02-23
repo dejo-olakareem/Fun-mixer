@@ -9,5 +9,6 @@ class EventsController < ApplicationController
 	def show
 		@background = url
 		@event = Event.find(params[:id])
+		@address = addy(@event.address)
 	end
 end

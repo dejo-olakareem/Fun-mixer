@@ -12,7 +12,9 @@
             	<h3 class="vilde">$ <%= @event.price%> </h1>
 									<p class="vilde" style="padding-bottom: 15px;"><%=@event.start_date.strftime("%b %a %d ")%> to <%=@event.end_date.strftime("%b %a %d ")%></p>
 									<section class="vilde">
-										<p><%=@event.address%></p>
+										<% @address.each do |spec| %>
+											<p><%=spec%></p>
+										<% end %>
 									</section>
 									<div class="regi vilde">
 										<% if current_user && !@event.users.include?(current_user)%>

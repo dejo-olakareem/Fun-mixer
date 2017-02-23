@@ -6,4 +6,9 @@ module EventsHelper
 		real = [selfy,party,pool].sample
 		return real
 	end
+
+
+	def addy(address)
+		arr = address.split(",")
+	end
 end
